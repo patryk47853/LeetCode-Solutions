@@ -1,0 +1,7 @@
+Using an ArrayList for list.contains() within nested loops can result in slower performance, especially when dealing with large datasets. The reason is that the 'contains()' method for an ArrayList has a time complexity of O(n), where n is the number of elements in the list. In provided ArrayList solution, we're using list.contains(l + diff) and list.contains(l + diff + diff) within a loop that iterates over the same list. This leads to nested iterations, which results in a time complexity of O(n^2).
+
+Now, let's see why using a HashSet would be more efficient:
+
+A HashSet is a data structure that provides constant time complexity for the 'contains()' operation, on average. This is because a HashSet uses a hash table to store and retrieve elements efficiently. The 'contains()' operation in a HashSet typically has an average time complexity of O(1), making it significantly faster than the O(n) complexity of ArrayList.contains().
+
+By using a HashSet to store the elements from the input array nums, we can achieve a more efficient solution.
